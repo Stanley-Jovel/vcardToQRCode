@@ -1,0 +1,57 @@
+<div class="container-fluid" ng-controller="StarterController" ng-init="getDirectory()">
+	<h2>{{'HI' | translate}} {{startervars.user.name}}, {{'DIRECTORY_GREETINGS' | translate}}</h2>
+	<label translate>DIRECTORY_DESCRIPTION</label>
+	<div ng-repeat="contact in contacts track by $index" class="directory-container">
+		<div class="col-md-12 col-lg-12">
+			<div class="col-md-6 col-lg-6">
+				<div class="col-md-6 col-lg-6">	
+					<div>
+						<label translate>NAME</label>:
+						<span>{{contact.name}} {{contact.lastname}}</span>
+					</div>
+					<div>
+						<label translate>ORG</label>:
+						<span>{{contact.org}}</span>
+					</div>
+					<div>
+						<label translate>TITLE</label>:
+						<span>{{contact.title}}</span>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-6">	
+					<div>
+						<label translate>TEL</label>:
+						<span>{{contact.tel}}</span>
+					</div>
+					<div>
+						<label translate>EMAIL</label>:
+						<span>{{contact.email}}</span>
+					</div>
+					<div>
+						<label translate>URL</label>:
+						<span>{{contact.url}}</span>
+					</div>
+				</div>
+				<div class="col-md-12 col-lg-12">
+					<label translate>ADDRESS</label>
+					<p>{{contact.street}}, {{contact.city}}, {{contact.state}}, {{contact.zip}}, {{contact.country}}</p>
+				</div>
+			</div>
+			<div class="col-md-6 col-lg-6">
+			  	<div class="qrcontainer col-lg-10 col-md-10">
+				  	<img ng-src="{{QRApi.url+contact.qrdata}}" alt="QRCode" ng-class="qrimg" imageonload="qrloading_hide_multiple($index)"/>
+				  	<div class='qrloading' ng-show="qrloading_array[$index]">
+				  		<img src="/meanStarter/assets/img/loaders/loader2.gif">
+				  	</div>
+			  	</div>
+			  	<div class="col-md-2 col-lg-2">
+			  		<button class="btn btn-danger" ng-click="qrcode_delete($index)">
+			  			{{'DELETE' | translate}}
+			  			<span class="glyphicon glyphicon-remove"></span>
+			  		</button>
+			  	</div>
+			</div>
+		<hr class="col-lg-12">
+		</div>
+	</div>
+</div>

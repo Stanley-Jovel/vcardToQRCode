@@ -1,0 +1,68 @@
+<section class="container-fluid generator_container" ng-controller="StarterController">
+	<div class="row description">
+		<h1 translate>INDEX_H1</h1>
+		<p translate>INDEX_DESCRIPTION</p>
+	</div>
+	<div>
+	  <form class="col-md-8 col-lg-7">
+	    <div class="form-group col-md-6 col-lg-6">
+	      <input type="text" class="form-control" translate translate-attr-placeholder="NAME" ng-model="contact.name">
+	    </div>
+	    <div class="form-group col-md-6 col-lg-6">
+	      <input type="text" class="form-control" translate translate-attr-placeholder="LAST_NAME" ng-model="contact.lastname">
+	    </div>
+	    <div class="form-group col-lg-12">
+	      <input type="text" class="form-control" translate translate-attr-placeholder="ORG" ng-model="contact.org">
+	    </div>
+	    <div class="form-group col-md-12">
+	      <input type="text" class="form-control" translate translate-attr-placeholder="TITLE" ng-model="contact.title">
+	    </div>
+	    <div class="form-group col-md-6 col-lg-6">
+	      <input type="text" class="form-control" translate translate-attr-placeholder="TEL" ng-model="contact.tel">
+	    </div>
+	    <div class="form-group col-md-6 col-lg-6">
+	      <input type="text" class="form-control" translate translate-attr-placeholder="EMAIL" ng-model="contact.email">
+	    </div>
+	    <div class="form-group col-lg-12">
+	      <input type="text" class="form-control" translate translate-attr-placeholder="URL" ng-model="contact.url">
+	    </div>
+	    <div class="form-group col-lg-12">
+	    	<label translate>ADDRESS</label>
+	      <input type="text" class="form-control" translate translate-attr-placeholder="STREET" ng-model="contact.street">
+	    </div>
+	    <div class="form-group col-md-4 col-lg-4">
+	      <input type="text" class="form-control" translate translate-attr-placeholder="CITY" ng-model="contact.city">
+	    </div>
+	    <div class="form-group col-md-4 col-lg-4">
+	      <input type="text" class="form-control" translate translate-attr-placeholder="STATE" ng-model="contact.state">
+	    </div>
+	    <div class="form-group col-md-4 col-lg-4">
+	      <input type="text" class="form-control" translate translate-attr-placeholder="ZIP" ng-model="contact.zip">
+	    </div>
+	    <div class="form-group col-lg-12">
+	      <input type="text" class="form-control" translate translate-attr-placeholder="COUNTRY" ng-model="contact.country">
+	    </div>
+	    <div class="form-group col-lg-12">
+	    	<button ng-click="resetContact()" class="btn btn-default" translate>RESET</button>
+	    	<button ng-click="generateQR()" class="btn btn-primary" translate>GENERATE</button>
+	    </div>
+	  </form>
+	</div>
+  <div class="col-md-4 col-lg-4">
+  	<div class="qrcontainer">
+	  	<img ng-src="{{QRApi.url+contact.qrdata}}" alt="QRCode" ng-class="qrimg" imageonload="qrloading_hide()"/>
+	  	<div class='qrloading' ng-show="qrloading">
+	  		<img src="/meanStarter/assets/img/loaders/loader2.gif">
+	  	</div>
+  	</div>
+  	<div ng-show="!show_save_buttons" class="generate_warning">
+  		<div class="alert alert-warning" translate>
+  			CLICK_GENERATE
+  		</div>
+  	</div>
+  	<div class="form-group save_buttons" ng-show="show_save_buttons">
+  		<a class="btn btn-default" target="_self" href="{{QRApi.url+contact.qrdata}}"  download="QRcode_{{contact.name}}_{{contact.lastname}}.png" translate>SAVE</a>
+  		<a href="#" ng-click="qrcode_save()" class="btn btn-default" translate>SAVE_IN_DIRECTORY</a>
+  	</div>
+  </div>
+</section>

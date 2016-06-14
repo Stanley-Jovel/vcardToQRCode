@@ -1,0 +1,83 @@
+.page-header {
+  padding-bottom: 0 !important;
+  margin: 0 !important;
+  border-bottom: 0 !important;
+}
+.page-header .navbar-nav {
+  float: right;
+}
+.page-header > div > div, .page-header > div > ul {
+  display: inline-block;
+}
+.text-edit {
+  float: right;
+  margin-top: 12px;
+}
+.account {
+  text-align: right;
+}
+.account > div, .account > ul {
+  text-align: left;
+}
+.navbar .nav > li > a.brand {
+  padding-left: 20px;
+  margin-left: 0
+}
+.content {
+  margin-top: 70px;
+  width: 100%
+}
+.description {
+  margin-bottom: 25px;
+}
+.generator_container {
+  margin-bottom: 75px;
+}
+.qrcontainer {
+  position: relative;
+  margin-bottom: 15px;
+}
+.qrimg {
+  height: 200px;
+  width: 200px;
+}
+.qrloading {
+  background-color: black;
+  height: 200px;
+  left: 0;
+  opacity: 0.80;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 200px;
+  z-index: 9999 !important;
+}
+.qrloading img {
+  position: relative;
+  top: 68px;
+}
+.save_buttons, .generate_warning{
+  margin-bottom: 75px;
+}
+.directory-container{
+  margin-top: 50px;
+}
+footer {
+  background: #ddd;
+  box-shadow: 0 8px 6px 6px black;
+  -webkit-box-shadow: 0 8px 6px 6px black;
+  -moz-box-shadow: 0 8px 6px 6px black;
+  bottom: 0;
+  height: 60px;
+  left: 0;
+  line-height: 60px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+}
+footer p {
+  padding: 5px 0 12px 10px
+}
+.featuredpic img {
+  width: 510px;
+}
