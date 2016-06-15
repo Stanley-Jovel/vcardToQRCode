@@ -26,7 +26,7 @@ module.exports = {
     }
     */
   },
-  hostname: 'http://localhost:3000',
+  hostname: 'http://peaceful-temple-28367.herokuapp.com',
   app: {
     name: 'vCard to QR Code'
   },
