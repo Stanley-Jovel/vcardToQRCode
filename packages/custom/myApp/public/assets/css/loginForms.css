@@ -2,7 +2,7 @@ html {
   height: 100%;
 }
 body.login, body.register, body.forgot-password {
-  background: url("/meanStarter/assets/img/bg.png");
+  /*background: url("/meanStarter/assets/img/bg.png");*/
   height: 100%;
   position: relative;
 }
@@ -43,7 +43,7 @@ body.login, body.register, body.forgot-password {
 }
 .form {
   background: #ffffff;
-  box-shadow: 0 1px 3px 1px #003644;
+  /*box-shadow: 0 1px 3px 1px #003644;*/
   margin-top: 35px;
   left: 50%;
   position: relative;
@@ -195,7 +195,7 @@ body.login, body.register, body.forgot-password {
   background: url("/meanStarter/assets/img/button_login.png") no-repeat 50% 50%;
   width: 107px;
   height: 47px;
-  font-size: 21px;
+  /*font-size: 21px;*/
   color: white;
   font-family: "open_sans_hebrewregular";
 }

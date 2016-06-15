@@ -39,10 +39,10 @@ module.exports = {
     },
     landingPage: '/',
     facebook: {
-      clientID: 'APP_ID',
-      clientSecret: 'APP_SECRET',
-      callbackURL: 'http://localhost:3000/api/auth/facebook/callback',
-      enabled: false
+      clientID: '994328933998969',
+      clientSecret: '32d8fdd386305f00e896bb2b6b0b7163',
+      callbackURL: 'http://peaceful-temple-28367.herokuapp.com/api/auth/facebook/callback',
+      enabled: true
     },
     twitter: {
       clientID: 'CONSUMER_KEY',

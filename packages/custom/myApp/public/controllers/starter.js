@@ -2,6 +2,7 @@
 angular.module('mean.meanStarter').controller('StarterController', ['$scope', '$rootScope', '$translate', '$state','ContactService', 'MeanUser', 'SweetAlert','Global',
   function($scope, $rootScope, $translate, $state, ContactService, MeanUser, SweetAlert, Global) {
     //variables
+    $scope.username = MeanUser.user.name;
     var vcard = 
       'BEGIN:VCARD\n'+
       'VERSION:3.0\n'+
@@ -129,9 +130,9 @@ angular.module('mean.meanStarter').controller('StarterController', ['$scope', '$
       });
     }
 
-    //get all qrcodes
+    //get all qrcodes from logged user
     $scope.getDirectory = function () {
-      ContactService.get().then(function (response) {
+      ContactService.get(MeanUser.user._id).then(function (response) {
         $scope.contacts = response.data;
         $scope.qrloading_array = [];      
         $scope.contacts.forEach(function (item, index) {

@@ -2,6 +2,7 @@
 
 angular.module('mean.meanStarter').config(['$translateProvider', function ($translateProvider) {
   var translationsES = {
+    HOME: 'Inicio',
     NAME: 'Nombre',
     LAST_NAME: 'Apellido',
     ORG: 'Organización',
@@ -21,7 +22,7 @@ angular.module('mean.meanStarter').config(['$translateProvider', function ($tran
     SAVE: 'Descargar',
     SAVE_IN_DIRECTORY: 'Guardar en directorio',
     INDEX_H1: 'Información de contacto a código QR',
-    INDEX_DESCRIPTION: 'Crea un código QR a partir de tu información de contacto para que pueda ser facilmente guardada en un smartphone sin necesidad de introducir tu información manualmente, solo escanea el código QR y listo!<br>Puedes usar el código QR en tarjetas de presentacion o curriculums',
+    INDEX_DESCRIPTION: 'Crea un código QR a partir de tu información de contacto para que pueda ser facilmente guardada en un smartphone sin necesidad de introducir tu información manualmente, solo escanea el código QR y listo!<br>Puedes usar el código QR en tarjetas de presentaci&oacute;n o curriculum',
     CLICK_GENERATE: 'Haz clic en <strong>"Generar"</strong> par crear tu código QR',
     QR_CODE_SAVED_IN_DIRECTORY: 'Tu código QR se guardó en tu directorio',
     GO_TO_DIRECTORY: 'Ir al directorio',
@@ -36,8 +37,19 @@ angular.module('mean.meanStarter').config(['$translateProvider', function ($tran
     JOIN: 'Registrarse',
     LOG_IN: 'Iniciar Sesión',
     LOG_OUT: 'Salir',
+    FORGOT_YOUR_PASSWORD: 'Olvidaste tu contrase&ntilde;a?',
+    SIGN_UP: 'Registrate',
+    DONT_YOU_HAVE_AN_ACCOUNT: 'No tienes una cuenta?',
+    OR: '&oacute;',
+    LOG_IN_WITH: 'Inicia con',
+    REPEAT: 'Repetir',
+    ALREADY_HAVE_AN_ACCOUNT: 'Ya tienes una cuenta?',
+    FORGOT_PASSWORD: 'Olviaste tu contrase&ntilde;a?',
+    ENTER_EMAIL_TO_RESET: 'Ingresa tu email para reiniciar tu contrase&ntilde;a',
+    SEND: 'Enviar',
   }
   var translationsEN = {
+    HOME: 'Home',
     NAME: 'Name',
     LAST_NAME: 'Last Name',
     ORG: 'Organization',
@@ -72,6 +84,16 @@ angular.module('mean.meanStarter').config(['$translateProvider', function ($tran
     JOIN: 'Join',
     LOG_IN: 'Log In',
     LOG_OUT: 'Log Out',
+    FORGOT_YOUR_PASSWORD: 'Forgot your password?',
+    SIGN_UP: 'Sign Up',
+    DONT_YOU_HAVE_AN_ACCOUNT: 'Don\'t have an account?',
+    OR: 'or',
+    LOG_IN_WITH: 'Log in with',
+    REPEAT: 'Repeat',
+    ALREADY_HAVE_AN_ACCOUNT: 'Already have an account?',
+    FORGOT_PASSWORD: 'Forgot Password?',
+    ENTER_EMAIL_TO_RESET: 'Please enter your email address to reset your password.',
+    SEND: 'Send',
   };
   // add translation tables
   $translateProvider.translations('en', translationsEN);

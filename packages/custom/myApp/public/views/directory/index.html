@@ -1,5 +1,5 @@
 <div class="container-fluid" ng-controller="StarterController" ng-init="getDirectory()">
-	<h2>{{'HI' | translate}} {{startervars.user.name}}, {{'DIRECTORY_GREETINGS' | translate}}</h2>
+	<h2>{{'HI' | translate}} {{username}}, {{'DIRECTORY_GREETINGS' | translate}}</h2>
 	<label translate>DIRECTORY_DESCRIPTION</label>
 	<div ng-repeat="contact in contacts track by $index" class="directory-container">
 		<div class="col-md-12 col-lg-12">

@@ -7,8 +7,8 @@ angular.module('mean.meanStarter').factory('ContactService', ['$http',
 		create: function (contact) {
 			return $http.post('/api/contact', contact);
 		},
-		get: function () {
-			return $http.get('/api/contact');
+		get: function (id) {
+			return $http.get('/api/contact/' + id);
 		},
 		delete: function (id) {
 			return $http.delete('/api/contact/' + id);

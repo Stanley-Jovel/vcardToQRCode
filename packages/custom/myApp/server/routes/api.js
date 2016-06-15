@@ -18,15 +18,6 @@ module.exports = function (MeanStarter, app) {
 				});
 			}
 		})
-		.get(function (req, res) {
-			if (req.isAuthenticated()) {
-				Contact.find({}, function (err, contacts) {
-					if (err) res.send(err);
-
-					res.json(contacts);
-				})
-			}
-		});
 	app.route('/api/contact/:contact_id')
 		.delete(function (req, res) {
 			if (req.isAuthenticated()) {
@@ -38,6 +29,15 @@ module.exports = function (MeanStarter, app) {
 						message: "Successfuly deleted"
 					});
 				});
+			}
+		})
+		.get(function (req, res) {
+			if (req.isAuthenticated()) {
+				Contact.find({user:  req.params.contact_id}, function (err, contacts) {
+					if (err) res.send(err);
+
+					res.json(contacts);
+				})
 			}
 		});
 };

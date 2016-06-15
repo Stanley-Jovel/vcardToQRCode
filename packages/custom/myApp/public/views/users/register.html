@@ -5,10 +5,10 @@
     <div class="alert alert-danger animated fadeIn" ng-show="reg.usernameError">{{reg.usernameError}}</div>
     <div class="alert alert-danger animated fadeIn" ng-show="reg.emailError">{{reg.emailError}}</div>
     <form id="register_form" ng-submit="reg.register()">
-        <h2>Sign Up</h2>
+        <h2 translate>SIGN_UP</h2>
 
         <div class="input-wrapper">
-            <input required id="name" type="text" name="name" placeholder="Full Name"
+            <input required id="name" type="text" name="name" translate translate-attr-placeholder="NAME"
                    ng-model="reg.user.name">
 
             <div class="error_message">Please enter a correct info #</div>
@@ -16,7 +16,7 @@
         </div>
 
         <div class="input-wrapper">
-            <input required id="email_block" type="email" name="email" placeholder="Email Address"
+            <input required id="email_block" type="email" name="email" translate translate-attr-placeholder="EMAIL"
                    ng-model="reg.user.email">
 
             <div class="error_message">Please enter a correct info #</div>
@@ -44,7 +44,7 @@
         </div>
         <div class="input-wrapper">
             <input required id="confirm_password" name="confirm_password" type="{{reg.input.type}}"
-                   placeholder="{{reg.input.placeholderConfirmPass}}" ng-model="reg.user.confirmPassword">
+                   placeholder="{{'REPEAT' | translate}} {{reg.input.placeholder}}" ng-model="reg.user.confirmPassword">
 
             <div class="error_message">Please enter a correct info #</div>
         <span class="pic password {{reg.input.iconClassConfirmPass}}" ng-click="reg.togglePasswordConfirmVisible()">
@@ -55,12 +55,9 @@
         </div>
 
         <div class="button_register">
-            <button type="submit" class="submit_button">Sign up</button>
-            <p>Already have an account?</p>
-            <a ui-sref='auth.login'>Log in</a>
-        </div>
-        <div class="woman_ninja_bottom">
-            <img src="/meanStarter/assets/img/woman_ninja.png" alt="#">
+            <button type="submit" class="submit_button" translate>SIGN_UP</button>
+            <p translate>ALREADY_HAVE_AN_ACCOUNT</p>
+            <a ui-sref='auth.login' translate>LOG_IN</a>
         </div>
     </form>
 </div>
