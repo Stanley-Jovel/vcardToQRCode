@@ -26,7 +26,7 @@ module.exports = {
     }
     */
   },
-  hostname: 'http://peaceful-temple-28367.herokuapp.com',
+  hostname: 'https://contact-qrcode.herokuapp.com',
   app: {
     name: 'vCard to QR Code'
   },
@@ -41,7 +41,7 @@ module.exports = {
     facebook: {
       clientID: '994328933998969',
       clientSecret: '32d8fdd386305f00e896bb2b6b0b7163',
-      callbackURL: 'http://peaceful-temple-28367.herokuapp.com/api/auth/facebook/callback',
+      callbackURL: 'https://contact-qrcode.herokuapp.com/api/auth/facebook/callback',
       enabled: true
     },
     twitter: {
